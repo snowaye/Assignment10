@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Assignment10</string>
+    <string name="nav_menu_home">Home</string>
+    <string name="nav_menu_search">Search</string>
+    <string name="nav_menu_coming_soon">Coming\\nSoon</string>
+    <string name="nav_menu_download">Download</string>
+    <string name="nav_menu_more">More</string>
+    <string name="label_title">Movie</string>
+    <string name="label_now_playing">Now Playing</string>
+    <string name="label_popula">Popular</string>
+    <string name="label_top_rated">Top Rated</string>
+    <string name="label_coming_soon">Coming Soon</string>
 </resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_payment"
+        android:icon="@drawable/ic_nav_menu_home"
+        android:title="@string/nav_menu_home"/>
+    <item
+        android:id="@+id/nav_po"
+        android:icon="@drawable/ic_nav_menu_search"
+        android:title="@string/nav_menu_search"/>
+    <item
+        android:id="@+id/nav_construction"
+        android:icon="@drawable/ic_nav_menu_coming_soon"
+        android:title="@string/nav_menu_coming_soon"/>
+    <item
+        android:id="@+id/nav_branch"
+        android:icon="@drawable/ic_nav_menu_download"
+        android:title="@string/nav_menu_download"/>
+    <item
+        android:id="@+id/nav_setting"
+        android:icon="@drawable/ic_nav_menu_more"
+        android:title="@string/nav_menu_more"/>
+</menu>
