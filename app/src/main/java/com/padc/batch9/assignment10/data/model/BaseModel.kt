@@ -10,6 +10,7 @@ abstract class BaseModel {
     protected val topRatedDataAgentNowPlaying:TopRatedMovieDataAgent = TopRatedNowPlayingMovieAgentImpl
     protected val popularDataAgentNowPlaying:PopularMovieDataAgent = PopularNowPlayingMovieAgentImpl
     protected val upComingDataAgentNowPlaying:UpComingMovieDataAgent = UpComingNowPlayingMovieAgentImpl
+    protected val searchMovieDataAgent:SearchMovieDataAgent = SearchMovieDataAgentImpl
 
     protected lateinit var database: MovieDatabase
 

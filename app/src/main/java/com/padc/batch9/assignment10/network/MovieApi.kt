@@ -1,9 +1,6 @@
 package com.padc.batch9.assignment10.network
 
-import com.padc.batch9.assignment10.network.response.GetUpComingResponse
-import com.padc.batch9.assignment10.network.response.GetNowPlayingResponse
-import com.padc.batch9.assignment10.network.response.GetPopularResponse
-import com.padc.batch9.assignment10.network.response.GetTopRatedResponse
+import com.padc.batch9.assignment10.network.response.*
 import com.padc.batch9.assignment10.util.*
 import retrofit2.Call
 import retrofit2.http.GET
@@ -37,4 +34,13 @@ interface MovieApi {
         @Query("language") language:String= LANGUAGE,
         @Query("page") page:Int = PAGE
     ): Call<GetUpComingResponse>
+
+    @GET(SEARCH_MOVIE)
+    fun searchMovie(
+        @Query("api_key") key:String= API_KEY,
+        @Query("language") language:String= LANGUAGE,
+        @Query("query") query:String,
+        @Query("page") page:Int = PAGE,
+        @Query("include_adult") include_adult:Boolean = false
+    ): Call<GetSearchMovieResponse>
 }
