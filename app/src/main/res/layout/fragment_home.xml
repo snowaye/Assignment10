@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:id="@+id/rootView"
     android:background="@color/colorPrimary"
     android:layout_height="match_parent">
     <LinearLayout
@@ -16,8 +18,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/label_now_playing"
+            android:layout_marginBottom="@dimen/inner_margin"
             android:gravity="start"
-            android:textSize="@dimen/text_size_h3"
+            android:textSize="@dimen/text_size_body"
             android:textAllCaps="true"
             android:textStyle="bold"
             android:textColor="@color/textColorPrimary"/>
@@ -35,8 +38,9 @@
             android:layout_height="wrap_content"
             android:text="@string/label_popula"
             android:gravity="start"
+            android:layout_marginBottom="@dimen/inner_margin"
             android:textAllCaps="true"
-            android:textSize="@dimen/text_size_h3"
+            android:textSize="@dimen/text_size_body"
             android:textStyle="bold"
             android:textColor="@color/textColorPrimary"/>
         <androidx.recyclerview.widget.RecyclerView
@@ -52,9 +56,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/label_top_rated"
+            android:layout_marginBottom="@dimen/inner_margin"
             android:gravity="start"
             android:textAllCaps="true"
-            android:textSize="@dimen/text_size_h3"
+            android:textSize="@dimen/text_size_body"
             android:textStyle="bold"
             android:textColor="@color/textColorPrimary"/>
         <androidx.recyclerview.widget.RecyclerView
@@ -70,9 +75,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/label_coming_soon"
+            android:layout_marginBottom="@dimen/inner_margin"
             android:textAllCaps="true"
             android:gravity="start"
-            android:textSize="@dimen/text_size_h3"
+            android:textSize="@dimen/text_size_body"
             android:textStyle="bold"
             android:textColor="@color/textColorPrimary"/>
         <androidx.recyclerview.widget.RecyclerView

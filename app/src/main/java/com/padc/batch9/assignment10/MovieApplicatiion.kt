@@ -1,6 +1,7 @@
 package com.padc.batch9.assignment10
 
 import android.app.Application
+import android.util.Log
 import androidx.work.OneTimeWorkRequest
 import androidx.work.WorkManager
 import com.padc.batch9.assignment10.data.model.*
@@ -13,6 +14,7 @@ class MovieApplicatiion: Application() {
 
     override fun onCreate() {
         super.onCreate()
+        Log.i("Movieapplication", "onCreate")
        NowPlayingMovieModelImpl.initDatabase(applicationContext)
         TopRatedMovieModelImpl.initDatabase(applicationContext)
         UpComingMovieModelImpl.initDatabase(applicationContext)
@@ -26,7 +28,7 @@ class MovieApplicatiion: Application() {
 
     private fun getNowPlayingOneTime() {
         val getEventWorkRequest = OneTimeWorkRequest
-            .Builder(NowPlayingWorker::class.java                )
+            .Builder(NowPlayingWorker::class.java)
             .build()
         WorkManager.getInstance(applicationContext)
             .enqueue(getEventWorkRequest)
@@ -34,7 +36,7 @@ class MovieApplicatiion: Application() {
 
     private fun getUpComingOneTime() {
         val getEventWorkRequest = OneTimeWorkRequest
-            .Builder(UpComingMovieWorker::class.java                )
+            .Builder(UpComingMovieWorker::class.java)
             .build()
         WorkManager.getInstance(applicationContext)
             .enqueue(getEventWorkRequest)
@@ -42,7 +44,7 @@ class MovieApplicatiion: Application() {
 
     private fun getPopulrOneTime() {
         val getEventWorkRequest = OneTimeWorkRequest
-            .Builder(PopularMovieWorker::class.java                )
+            .Builder(PopularMovieWorker::class.java)
             .build()
         WorkManager.getInstance(applicationContext)
             .enqueue(getEventWorkRequest)
@@ -50,7 +52,7 @@ class MovieApplicatiion: Application() {
 
     private fun getTopRatedOneTime() {
         val getEventWorkRequest = OneTimeWorkRequest
-            .Builder(TopRatedMovieWorker::class.java                )
+            .Builder(TopRatedMovieWorker::class.java)
             .build()
         WorkManager.getInstance(applicationContext)
             .enqueue(getEventWorkRequest)

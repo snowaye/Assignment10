@@ -11,7 +11,7 @@ import com.padc.batch9.assignment10.data.vo.NowPlayingMovieVo
 abstract class NowPlayingMovieDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    abstract fun insertNowPlalyingMovies(events: List<NowPlayingMovieVo>) : LongArray
+    abstract fun insertNowPlalyingMovies(movies: List<NowPlayingMovieVo>) : LongArray
 
     @Query("select * from now_playing_movie")
     abstract fun getAllNowPlayingMovies(): LiveData<List<NowPlayingMovieVo>>

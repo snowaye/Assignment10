@@ -12,9 +12,9 @@ object NowPlayingMovieModelImpl: BaseModel(), NowPlayingMovieModel {
 
     }
 
-    override fun getNowPlayingMovieById(eventId: Int): LiveData<NowPlayingMovieVo> {
+    override fun getNowPlayingMovieById(id: Int): LiveData<NowPlayingMovieVo> {
         return Transformations.distinctUntilChanged (
-            database.nowPlayingDao().getNowPlayingMovieById(eventId)
+            database.nowPlayingDao().getNowPlayingMovieById(id)
         )
     }
 }

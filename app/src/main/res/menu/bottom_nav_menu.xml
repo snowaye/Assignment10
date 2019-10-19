@@ -2,23 +2,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/nav_payment"
+        android:id="@+id/nav_home"
         android:icon="@drawable/ic_nav_menu_home"
         android:title="@string/nav_menu_home"/>
     <item
-        android:id="@+id/nav_po"
+        android:id="@+id/nav_search"
         android:icon="@drawable/ic_nav_menu_search"
         android:title="@string/nav_menu_search"/>
     <item
-        android:id="@+id/nav_construction"
+        android:id="@+id/nav_coming_soon"
         android:icon="@drawable/ic_nav_menu_coming_soon"
         android:title="@string/nav_menu_coming_soon"/>
     <item
-        android:id="@+id/nav_branch"
+        android:id="@+id/nav_download"
         android:icon="@drawable/ic_nav_menu_download"
         android:title="@string/nav_menu_download"/>
     <item
-        android:id="@+id/nav_setting"
+        android:id="@+id/nav_more"
         android:icon="@drawable/ic_nav_menu_more"
         android:title="@string/nav_menu_more"/>
 </menu>

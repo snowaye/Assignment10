@@ -45,7 +45,7 @@ class NowPlayingMovieVo(
     @SerializedName("original_title")
     val originalTitle: String,
 
-    @ColumnInfo(name = "genre_ids")
+
     @SerializedName("genre_ids")
     val genreList: List<String>,
 
