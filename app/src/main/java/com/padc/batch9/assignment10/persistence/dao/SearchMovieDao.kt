@@ -5,7 +5,6 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.padc.batch9.assignment10.data.vo.NowPlayingMovieVo
 import com.padc.batch9.assignment10.data.vo.SearchMovieVo
 
 @Dao

@@ -19,6 +19,8 @@ class MovieApplicatiion: Application() {
         TopRatedMovieModelImpl.initDatabase(applicationContext)
         UpComingMovieModelImpl.initDatabase(applicationContext)
         PopularMovieModelImpl.initDatabase(applicationContext)
+        SearchMovieModelImpl.initDatabase(applicationContext)
+        SimilarMovieModelImpl.initDatabase(applicationContext)
 
         getNowPlayingOneTime()
         getPopulrOneTime()

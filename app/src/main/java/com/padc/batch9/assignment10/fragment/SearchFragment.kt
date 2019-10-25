@@ -1,15 +1,19 @@
 package com.padc.batch9.assignment10.fragment
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.AppCompatEditText
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import com.padc.batch9.assignment10.R
+import com.padc.batch9.assignment10.activity.BaseActivity
 import com.padc.batch9.assignment10.activity.MovieDetailActivity
 import com.padc.batch9.assignment10.adapter.SearchMovieAdapter
 import com.padc.batch9.assignment10.data.vo.SearchMovieVo
@@ -54,8 +58,26 @@ class SearchFragment :Fragment(), SearchMovieView{
         mAdapter = SearchMovieAdapter(mPresenter)
 
         val recyclerView = rootView.findViewById<RecyclerView>(R.id.recyclerview)
+        val etSearch = rootView.findViewById<AppCompatEditText>(R.id.et_search)
         recyclerView.layoutManager = GridLayoutManager(context, 3, RecyclerView.VERTICAL, false)
         recyclerView.adapter = mAdapter
+
+        etSearch.addTextChangedListener(object : TextWatcher {
+
+            override fun afterTextChanged(s: Editable) {
+                if(s.length >= 3) {
+                    mPresenter.onEditTextTextChange(s.toString().trim(), activity as BaseActivity)
+                }
+            }
+
+            override fun beforeTextChanged(s: CharSequence, start: Int,
+                                           count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(s: CharSequence, start: Int,
+                                       before: Int, count: Int) {
+            }
+        })
         return rootView
     }
 }

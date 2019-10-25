@@ -9,4 +9,6 @@ interface SearchMovieModel {
     fun searchMovie(
         query:String,
         onFailure:(String) -> Unit):LiveData<List<SearchMovieVo>>
+
+    fun  searchMovieById(id:Int):LiveData<SearchMovieVo>
 }

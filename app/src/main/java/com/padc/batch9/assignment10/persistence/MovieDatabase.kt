@@ -11,7 +11,8 @@ import com.padc.batch9.assignment10.persistence.typeconverter.StringTypeConverte
 import com.padc.batch9.assignment10.util.MOVIE_DB
 
 @Database(entities = arrayOf(NowPlayingMovieVo::class, PopularMovieVo::class,
-    TopRatedMovieVo::class, UpComingMovieVo::class, SearchMovieVo::class),version = 2, exportSchema = false)
+    TopRatedMovieVo::class, UpComingMovieVo::class, SearchMovieVo::class,
+    SimilarMovieVo::class),version = 4, exportSchema = false)
 @TypeConverters(StringTypeConverter::class)
 abstract class MovieDatabase : RoomDatabase() {
 
@@ -24,6 +25,8 @@ abstract class MovieDatabase : RoomDatabase() {
     abstract fun upComingDao():UpComingMovieDao
 
     abstract fun searchMovieDao():SearchMovieDao
+
+    abstract fun similarMovieDao():SimilarMovieDao
 
     companion object{
         private var instance : MovieDatabase?= null
