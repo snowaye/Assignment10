@@ -7,6 +7,7 @@ import com.padc.batch9.assignment10.data.vo.SearchMovieVo
 
 object SearchMovieModelImpl:BaseModel(), SearchMovieModel {
 
+
     override fun searchMovieById(id: Int): LiveData<SearchMovieVo> {
         return Transformations.distinctUntilChanged (
             database.searchMovieDao().getSearchMovieById(id)
